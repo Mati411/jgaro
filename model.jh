@@ -1,0 +1,49 @@
+
+entity Region {
+	regionName String required
+}
+
+entity Country {
+	countryName String required
+}
+
+entity Location {
+	streetAddress String,          
+	city String,
+	stateProvince String
+}
+
+entity Department {
+	departmentName String required
+}
+
+entity Employee {
+	firstName String required,
+	lastName String required,
+	email String required,
+	phoneNumber String,
+	hireDate Instant required,
+	salary Long required,
+	commissionPct Long
+}
+
+relationship OneToOne {
+	Country{region} to Region,
+    Location{country} to Country,
+    Department{location} to Location
+}
+
+relationship OneToMany {
+	Department to Employee{department}
+}
+
+relationship ManyToOne {
+	Employee{manager} to Employee
+}
+
+// Set pagination options
+paginate Employee with infinite-scroll
+paginate Department with pagination
+
+// Set service options to all except few
+service all with serviceImpl except Employee
