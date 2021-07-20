@@ -50,6 +50,12 @@ public class CacheConfiguration {
             createCache(cm, com.bewise.bugtracker.domain.User.class.getName() + ".authorities");
             createCache(cm, com.bewise.bugtracker.domain.PersistentToken.class.getName());
             createCache(cm, com.bewise.bugtracker.domain.User.class.getName() + ".persistentTokens");
+            createCache(cm, com.bewise.bugtracker.domain.Region.class.getName());
+            createCache(cm, com.bewise.bugtracker.domain.Country.class.getName());
+            createCache(cm, com.bewise.bugtracker.domain.Location.class.getName());
+            createCache(cm, com.bewise.bugtracker.domain.Department.class.getName());
+            createCache(cm, com.bewise.bugtracker.domain.Department.class.getName() + ".employees");
+            createCache(cm, com.bewise.bugtracker.domain.Employee.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -42,6 +42,8 @@
     "rememberMeKey": "cfb066bc84e076f8a617d09d4b354678daeb0e3648b63480581146525c0f1e19e917ce0e4128bc50d0ac1daac39214f46aaf",
     "devServerPort": 9060,
     "clientPackageManager": "npm",
-    "languages": ["es", "en"]
+    "languages": ["es", "en"],
+    "entities": ["Region", "Country", "Location", "Department", "Employee"],
+    "lastLiquibaseTimestamp": 1626784734000
   }
 }
